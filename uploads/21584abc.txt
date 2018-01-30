@@ -1,0 +1,45 @@
+<?php //Developed by www.freestudentprojects.com
+if(isset($_SESSION[adminid]))
+{
+?>
+<table border=1>
+<tr><th>From date</th><th>To Date</th><th>Reason</th><th>Approve / Reject</th></tr>
+<?php //Developed by www.freestudentprojects.com 
+while($rs=mysqli_fetch_array($selsql))
+{
+	echo "<tr><td>$rs[logindate]</td><td>$rs[logoutdate]</td><td>$rs[reason]</td>";
+	echo "<td><select name=stat>
+	<option value=Approved>Approve</option>
+	<option value=Denied>Deny</option>
+	</select></td>";
+}?>
+<tr><th colspan=4><input type=submit name=submit1 value=Done></th></tr>
+</table>
+<?php //Developed by www.freestudentprojects.com }
+else
+{
+?>
+
+<?php //Developed by www.freestudentprojects.com }?>
+
+
+else if(frmapp.tsalexp.value=="")
+	{
+		alert("Salary should not be empty...");
+		frmapp.tsalexp.focus();
+		return false;
+	}
+	else if(isNaN(frmapp.tsalexp.value))
+	{
+		alert("Salary should not be empty...");
+		frmapp.fsalexp.focus();
+		return false;
+	}
+
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	else if(!filter.test(frmapp.eid.value))
+	{
+		alert("Please enter valid email !!...");
+		frmapp.eid.focus();	
+		return false;
+	}
